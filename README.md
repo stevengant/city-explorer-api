@@ -15,7 +15,7 @@ Manually add the remaining files identified in the folder tree above. Put approp
 
 ## Architecture
 
-VSCode, JS, Express, dotenv, cors, HTML, React, NodeJS, 
+VSCode, JS, Express, dotenv, cors, HTML, React, NodeJS,
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
@@ -24,6 +24,8 @@ VSCode, JS, Express, dotenv, cors, HTML, React, NodeJS,
 
 ## Credit and Collaborations
 
+Collabed with Marco Villafana
+
 - Estimate of time needed to complete: 3 hours
 
 - Start time: 1500
@@ -31,3 +33,17 @@ VSCode, JS, Express, dotenv, cors, HTML, React, NodeJS,
 - Finish time: 2200
 
 - Actual time needed to complete: 7 hours
+
+![lab07 domain model](Lab7_domain.jpg)
+
+## Lab08 - Movies and Weather API
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 1400
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+![lab08 domain model](Lab08_domain.jpg)
