@@ -42,8 +42,8 @@ Estimate of time needed to complete: 3 hours
 
 Start time: 1400
 
-Finish time: _____
+Finish time: 1930
 
-Actual time needed to complete: _____
+Actual time needed to complete: 5.5 hours
 
 ![lab08 domain model](Lab08_domain.jpg)
