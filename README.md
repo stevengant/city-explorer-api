@@ -47,3 +47,15 @@ Finish time: 1930
 Actual time needed to complete: 5.5 hours
 
 ![lab08 domain model](Lab08_domain.jpg)
+
+## Lab09 - Refactoring into Modules
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1345
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+![Lab09 domain model](Lab09_domain.jpg)
