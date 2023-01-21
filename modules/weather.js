@@ -1,27 +1,37 @@
 'use strict';
 
 const axios = require('axios');
+let cache = {};
 
-async function getWeather(req, res, next) {
+async function getWeather(latitude, longitude) {
+  const key = 'weather-' + latitude + longitude;
+  const url = `http://api.weatherbit.io/v2.0/forecast/daily/?key=${process.env.WEATHER_API_KEY}&lang=en&lat=${latitude}&lon=${longitude}&days=5`;
+
+  if (cache[key] && (Date.now() - cache[key].timestamp < 50000)) {
+    console.log('Cache hit');
+  } else {
+    console.log('Cache miss');
+    cache[key] = {};
+    cache[key].timestamp = Date.now();
+    cache[key].data = await axios.get(url)
+    .then(response => parseWeather(response.data));
+  }
+  
+  return cache[key].data;
+}
+
+function parseWeather(weatherData) {
   try {
-    let lat = req.query.lat;
-    let lon = req.query.lon;
-
-    let url = `http://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&lat=${lat}&lon=${lon}&days=5&units=I`;
-
-    let weatherResults = await axios.get(url);
-    // *** USE A CLASS TO MINIFY BULKY DATA ***
-    let dataToSend = weatherResults.data.data.map(elem => new Forecast(elem));
-
-    res.status(200).send(dataToSend);
-
-  } catch (error) {
-    next(error);
+    const weatherSummaries = weatherData.data.map(day => {
+      return new Weather(day);
+    });
+    return Promise.resolve(weatherSummaries);
+  } catch (e) {
+    return Promise.reject(e);
   }
 }
 
-// *** Forecast CLASS TO GROOM BULKY DATA ***
-class Forecast {
+class Weather {
   constructor(data) {
     this.date = data.datetime;
     this.description = data.weather.description;

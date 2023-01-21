@@ -54,8 +54,20 @@ Estimate of time needed to complete: 2 hours
 
 Start time: 1345
 
-Finish time: _____
+Finish time: 1800
 
-Actual time needed to complete: _____
+Actual time needed to complete: 4 hr, 15 min
 
 ![Lab09 domain model](Lab09_domain.jpg)
+
+## Lab10 - Performance/Cache
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 1330
+
+Finish time: 1800
+
+Actual time needed to complete: 4 hr, 15 min
+
+![Lab10 domain model](301Lab10.jpg)
