@@ -68,6 +68,6 @@ Start time: 1330
 
 Finish time: 1800
 
-Actual time needed to complete: 4 hr, 15 min
+Actual time needed to complete: 4 hr, 15 min.
 
 ![Lab10 domain model](301Lab10.jpg)
